@@ -1,0 +1,245 @@
+/* EXTERNAL */
+
+/*
+    ### Primary
+
+    - Desaturated Red: hsl(0, 36%, 70%)
+    - Soft Red: hsl(0, 93%, 68%)
+
+    ### Neutral
+
+    - Dark Grayish Red: hsl(0, 6%, 24%)
+
+    ### Gradients
+
+    - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+    - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+/* GENERAL */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    background: hsl(0, 6%, 24%);
+    color: aliceblue;
+}
+.attribution a { 
+    color: hsl(0, 36%, 70%); 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* SPECIFY */
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background: url(images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.main-cont {
+    width: 60%;
+    padding: 65px 50px 0 12%;
+}
+    .main-cont .mobile {
+        display: none;
+    }
+    .main-cont h1 {
+        letter-spacing: 25px;
+        font-size: 50px;
+        text-transform: uppercase;
+        margin-top: 135px;
+        margin-bottom: 40px;
+    }
+        .main-cont h1 span {
+            font-weight: 300;
+            color: hsl(0, 36%, 70%);
+        }
+    .main-cont p {
+        font-size: 16px;
+        font-weight: 400;
+        color: hsl(0, 36%, 70%);
+        margin-bottom: 50px;
+        max-width: 425px;
+    }
+    .main-cont form {
+        display: flex;
+        flex-direction: column;
+    }
+        .main-cont form div {
+            display: flex;
+        }
+            .main-cont form div input {
+                width: 440px;
+                height: 55px;
+                border-radius: 50px;
+                border: 1px hsl(0, 36%, 70%) solid;
+                padding: 18px 30px;
+            }
+            .main-cont form div .error {
+                position: relative;
+                left: -25%; 
+                top: 15px;
+                width: 25px;
+                height: 25px;
+                visibility: hidden;
+            }
+                .main-cont form div .error.show {
+                    visibility: visible;
+                }
+            .main-cont form div .button {
+                width: 95px;
+                height: 55px;
+                border-radius: 50px;
+                border: none;
+                margin-left: -20%;
+                background: linear-gradient(135deg,hsl(0, 80%, 88%), hsl(0, 74%, 74%));
+                cursor: pointer;
+                transition: all .5s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+                .main-cont form div .button:hover {
+                    box-shadow: -5px 12px 30px hsl(0, 36%, 70%);
+                    background: linear-gradient(135deg,hsl(0, 86%, 92%), hsl(0, 68%, 78%));
+                    transition: all .5s;
+                }
+        .main-cont form .mensage {
+            font-size: 15px;
+            padding-left: 25px;
+            color: hsla(0, 93%, 68%, 0.583);
+            visibility: hidden;
+        }
+            .main-cont form .mensage.show {
+                visibility: visible;
+            }
+
+.desktop {
+    width: 40%;
+    background-image: url(images/hero-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 735px) {
+    main {
+        width: 100vw;
+        height: min-content;
+        display: flex;
+        background: url(images/bg-pattern-desktop.svg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .main-cont {
+        width: 100%;
+        height: 800px;
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+    }
+        .main-cont .icon {
+            height: 25px;
+            width: 110px;
+            margin-left: 30px;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+        .main-cont .mobile {
+            display: initial;
+            width: 100%;
+            min-height: 250px;
+            background: url(images/hero-mobile.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .main-cont h1 {
+            letter-spacing: 15px;
+            font-size: 50px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            margin-top: 60px;
+            text-align: center;
+        }
+            .main-cont h1 span {
+                font-weight: 300;
+                color: hsl(0, 36%, 70%);
+            }
+        .main-cont p {
+            font-size: 16px;
+            font-weight: 400;
+            color: hsl(0, 36%, 70%);
+            margin-bottom: 50px;
+            max-width: 100%;
+            padding: 0 40px;
+            text-align: center;
+        }
+        .main-cont form {
+            display: flex;
+            flex-direction: column;
+        }
+            .main-cont form div {
+                display: flex;
+            }
+                .main-cont form div input {
+                    width: 440px;
+                    height: 55px;
+                    border-radius: 50px;
+                    border: 1px hsl(0, 36%, 70%) solid;
+                    padding: 18px 30px;
+                }
+                .main-cont form div .error {
+                    position: relative;
+                    left: -25%; 
+                    top: 15px;
+                    width: 25px;
+                    height: 25px;
+                    visibility: hidden;
+                }
+                    .main-cont form div .error.show {
+                        visibility: visible;
+                    }
+                .main-cont form div .button {
+                    width: 95px;
+                    height: 55px;
+                    border-radius: 50px;
+                    border: none;
+                    margin-left: -20%;
+                    background: linear-gradient(135deg,hsl(0, 80%, 88%), hsl(0, 74%, 74%));
+                    cursor: pointer;
+                    transition: all .5s;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+                    .main-cont form div .button:hover {
+                        box-shadow: -5px 12px 30px hsl(0, 36%, 70%);
+                        background: linear-gradient(135deg,hsl(0, 86%, 92%), hsl(0, 68%, 78%));
+                        transition: all .5s;
+                    }
+            .main-cont form .mensage {
+                font-size: 15px;
+                padding-left: 25px;
+                color: hsla(0, 93%, 68%, 0.583);
+                visibility: hidden;
+            }
+                .main-cont form .mensage.show {
+                    visibility: visible;
+                }
+    
+    .desktop {
+        display: none;
+    }
+}
